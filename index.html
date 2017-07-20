@@ -1,0 +1,104 @@
+<!DOCTYPE=html>
+<html>
+<head>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/css/bootstrap-slider.min.css"
+  rel="stylesheet"
+  crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <div class="item"><h1>Pomodoro Clock</h1><h3>Simple to use:</h3>
+        </div>
+        <div class="item  text-left">
+          <ol>
+            <li>
+              Use the slider below to set the time in minutes.
+            </li>
+            <li>
+              Click the Blue Button with the time shown
+            </li>
+            <li>
+              Click the same button to stop the timer
+            </li>
+            <li>
+              Click Clear All to clear the timer and current time
+            </li>
+          </ol>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6 text-center">
+        <div class="item">  <div class="col-xs-3"><button type="button" id="startDuration" onClick="startRunner(['startDuration','start']);" class="btn btn-info btn-circle">15</button></div>
+        <h3>Work Time</h3>
+          <input id="start"
+          data-slider-id='startDuration'
+          type="text"
+          data-slider-min="1"
+          data-slider-max="25"
+          data-slider-step="1"
+          data-slider-value="15"/>
+
+</div>
+      </div>
+      <div class="col-xs-6 text-center">
+        <div class="item">  <div class="col-xs-3"><button type="button" id="stopDuration" onClick="startRunner(['stopDuration','rest']);" class="btn btn-info btn-circle">5</button></div>
+          <h3>Rest Time</h3>
+
+          <input id="stop"
+          data-slider-id='stopDuration'
+          type="text"
+          data-slider-min="1"
+          data-slider-max="25"
+          data-slider-step="1"
+          data-slider-value="5"/></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-10">
+        <div class="timerCounter item h4"></div>
+      </div>
+      <div  class="col-xs-2">
+          <div class="item"><button onClick="resetAll();" class="btn btn-block btn-primary">clear all</button></div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="item">
+          <div class="content timer" data-attr="Will run for 15 Minutes" id="startTimer" style="width: 83.3333%;">
+            <div class="timerSand start"></div>
+          </div>
+          <div class="content timer" data-attr="Will rest for 5 Minutes" id="restTimer">
+            <div class="timerSand rest"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.7.2/bootstrap-slider.min.js"></script>
+<script src="app.js"></script>
+
+
+
+
+</body></html>
